@@ -11,7 +11,13 @@ html(lang='en')
     script(src='/js/lircNodeJsWeb.js')
   body
     div.container-fixed.container
-      div.row.row-xs-1
-        include deviceSelect
-      div.row.row-xs-8
-        block deviceKeys
+      div.row.row-flex.flex-4
+        div.flex-1.bg-info.text-center
+          h3 #{title}
+      div.row.row-flex.flex-4
+        each key in Object.keys(devices)
+          div(id='device-'+key, class=' flex-1 btn btn-info text-center') #{devices[key].label}
+
+      div
+        input#currentDevice(type='hidden', value=device)
+      block deviceKeys

@@ -1,9 +1,12 @@
-div.container
-  div.row
+div.container.container-flex
+  div.row.row-flex.flex-3
     div.col-xs-12.bg-info.text-center
       h4 #{title}
-  div.row
+  div.row.row-flex.flex-1
+  div.row.row-flex.flex-3
     each key in Object.keys(devices)
-      div(id='device-'+key, class=' col-xs-'+colWidth+' col-sm-'+colWidth+' col-md-'+colWidth+' col-lg-'+colWidth+' btn btn-info text-center') #{devices[key].label}
+      div(id='device-'+key, class=' flex-1 btn btn-info text-center') #{devices[key].label}
   div
     input#currentDevice(type='hidden', value=device)
+  div.row.flex-10
+    block deviceKeys
