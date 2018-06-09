@@ -1,35 +1,72 @@
 {
   "devices":{
-    "tv":{
-      "title": "TV - Samsung",
-      "label": "TV",
-      "device": "SamsungTv"
-    },
-    "vizio":{
+    "vizio_tv":{
       "title": "Vizio TV",
-      "label": "Vizio",
-      "device": "vizio"
+      "label": "LCD",
+      "device": "tv_vizio_VO320E"
+    },
+    "toshiba_tv":{
+      "title": "Toshiba TV",
+      "label": "CRT",
+      "device": "tv_toshiba_26HF15"
+    },
+    "homeworx_dvr":{
+      "title": "Homeworx DVR",
+      "label": "DVR",
+      "device": "dvr_homeworx_HW150PVR"
+    },
+    "lg_soundbar":{
+      "title": "LG Soundbar",
+      "label": "Sound",
+      "device": "soundbar_lg_NB3530A"
     }
   },
   "macros":{
-    "watch_tv": [
-      { "device": "tv",    "directive": "SEND_ONCE", "key": "KEY_POWER" },
-      { "device": "cable", "directive": "SEND_ONCE", "key": "KEY_POWER" }
+    "soundbar_vol_down": [
+      { "device": "lg_soundbar", "directive": "SEND_ONCE", "key": "KEY_VOL_DOWN" }
     ],
-    "game_input":[
-      { "device": "tv", "directive": "SEND_ONCE", "key": "KEY_TV",     "delay": 1000 },
-      { "device": "tv", "directive": "SEND_ONCE", "key": "KEY_SOURCE", "delay": 2000 },
-      { "device": "tv", "directive": "SEND_ONCE", "key": "KEY_SOURCE", "delay": 2000 },
-      { "device": "tv", "directive": "SEND_ONCE", "key": "KEY_SOURCE", "delay": 2000 },
-      { "device": "tv", "directive": "SEND_ONCE", "key": "KEY_SOURCE", "delay": 2000 },
-      { "device": "tv", "directive": "SEND_ONCE", "key": "KEY_SOURCE" },
-      { "device": "tv", "directive": "SEND_ONCE", "key": "KEY_ENTER"}
+    "soundbar_vol_up": [
+      { "device": "lg_soundbar", "directive": "SEND_ONCE", "key": "KEY_VOL_UP" }
     ],
-    "toon_tv":[
-      { "device": "tv", "directive": "SEND_ONCE", "key": "KEY_TV" },
-      { "device": "tv", "directive": "SEND_ONCE", "key": "KEY_3" },
-      { "device": "tv", "directive": "SEND_ONCE", "key": "KEY_5" },
-      { "device": "tv", "directive": "SEND_ONCE", "key": "KEY_ENTER" }
+    "soundbar_mute": [
+      { "device": "lg_soundbar", "directive": "SEND_ONCE", "key": "KEY_MUTE" }
+    ],
+    "buzzr": [
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_5", "delay": 400 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_DASH", "delay": 400 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_2", "delay": 400 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_MENU" }
+    ],
+    "nhk_world": [
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_2", "delay": 400 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_2", "delay": 400 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_DASH", "delay": 400 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_4", "delay": 400 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_MENU" }
+    ],
+    "aspect_ratio": [
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_MENU", "delay": 300 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_DOWN", "delay": 300 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_DOWN", "delay": 300 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_DOWN", "delay": 300 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_MENU", "delay": 300 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_DOWN", "delay": 300 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_DOWN", "delay": 300 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_RIGHT", "delay": 300 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_RIGHT", "delay": 300 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_LAST", "delay": 300 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_LAST", "delay": 300 }
+    ],
+    "chrome":[
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_TV", "delay": 400 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_INPUT", "delay": 400 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_INPUT", "delay": 400 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_INPUT", "delay": 400 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_INPUT", "delay": 400 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_INPUT", "delay": 400 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_INPUT", "delay": 400 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_INPUT", "delay": 400 },
+      { "device": "vizio_tv", "directive": "SEND_ONCE", "key": "KEY_MENU" }
     ]
   }
 }
